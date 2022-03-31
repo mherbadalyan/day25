@@ -129,7 +129,7 @@ public class Main {
      */
     private static String deleteCharX(String str) {
         if (checkObject(str)) {
-            return "Invalid argument";
+            throw new IllegalArgumentException();
         }
         return helperFOrDeleteCharX(str.toCharArray(), 0);
     }
@@ -150,7 +150,7 @@ public class Main {
      */
     private static String reverseString(String str) {
         if (checkObject(str)) {
-            return "Invalid argument";
+            throw new IllegalArgumentException();
         }
         return helperForReverseString(str.toCharArray(), str.length() - 1);
     }
@@ -198,7 +198,7 @@ public class Main {
      */
     private static String stringCleaner(String str) {
         if (checkObject(str)) {
-            return "Invalid argument";
+            throw new IllegalArgumentException();
         }
         return helperForStringCleaner(str, 1);
     }
@@ -296,7 +296,7 @@ public class Main {
      */
     private static String addAsteriskBetweenLetters(String str) {
         if (checkObject(str)) {
-            return "Invalid argument";
+            throw new IllegalArgumentException();
         }
         StringBuilder stringBuilder = new StringBuilder();
         return helperForAsterisk(str, stringBuilder, 0, str.length()).toString();
@@ -320,7 +320,7 @@ public class Main {
      */
     private static String addParenthesis(String str) {
         if (checkObject(str)) {
-            return "Invalid argument";
+            throw new IllegalArgumentException();
         }
         StringBuilder newStr = new StringBuilder("(");
 
@@ -352,7 +352,7 @@ public class Main {
      */
     private static String mirroringString(String str) {
         if (checkObject(str)) {
-            return "Invalid argument";
+            throw new IllegalArgumentException();
         }
         StringBuilder newStr = new StringBuilder(str);
         return String.valueOf(helperForMirroring(str, newStr, str.length() - 1));
@@ -375,7 +375,7 @@ public class Main {
      */
     private static String cutIdenticalLetters(String str) {
         if (checkObject(str)) {
-            return "Invalid argument";
+            throw new IllegalArgumentException();
         }
         StringBuilder newStr = new StringBuilder(str);
         return String.valueOf(helperForCutIdenticalLetters(str, newStr, str.length(), 0, 0));
